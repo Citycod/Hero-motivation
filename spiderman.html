@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spider-Man’s Motivation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Hero Image and Title -->
+      <div class="hero-quote-container">
+        <img src="/img/spider man.png" alt="Spider-Man" class="hero-image" />
+        <h1 class="hero-title">Spider-Man’s Words of Wisdom</h1>
+      </div>
+
+      <!-- Quote Section -->
+      <p class="quote-text">"With great power comes great responsibility."</p>
+
+      <!-- Navigation Buttons -->
+      <div class="buttons">
+        <a href="hero.html" class="back-button">Back to Heroes</a>
+        <button class="new-quote-button" onclick="showNewQuote()">
+          Inspire Me!
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to change quotes (optional for more interactivity)
+      const quotes = [
+        "With great power comes great responsibility.",
+        "Stay brave, even when things get tough!",
+        "True heroes never give up, even when things seem impossible.",
+      ];
+
+      function showNewQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        document.querySelector(".quote-text").textContent = quotes[randomIndex];
+      }
+    </script>
+  </body>
+</html>

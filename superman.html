@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superman's Motivation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Hero Image and Title -->
+      <div class="hero-quote-container">
+        <img src="/img/superman.png" alt="Superman" class="hero-image" />
+        <h1 class="hero-title">Superman's Words of Wisdom</h1>
+      </div>
+
+      <!-- Quote Section -->
+      <p class="quote-text">
+        Keep exploring, and never give up on an adventure!"
+      </p>
+
+      <!-- Navigation Buttons -->
+      <div class="buttons">
+        <a href="hero.html" class="back-button">Back to Heroes</a>
+        <button class="new-quote-button" onclick="showNewQuote()">
+          Inspire Me!
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to change quotes (optional for more interactivity)
+      const quotes = [
+        "You are stronger than you think.",
+        "Believe in yourself and fight for what’s right.",
+        "Stand tall, and never let fear hold you back.",
+        "True heroes never give up, even when things seem impossible.",
+        "Embrace who you are; that’s your true power.",
+        "Keep exploring, and never give up on an adventure!",
+      ];
+
+      function showNewQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        document.querySelector(".quote-text").textContent = quotes[randomIndex];
+      }
+    </script>
+  </body>
+</html>
